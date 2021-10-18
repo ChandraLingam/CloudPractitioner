@@ -1,0 +1,39 @@
+# Lab Exercises Developed by Cloud Wave LLC. 
+#   https://www.cloudwavetraining.com
+# This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF
+# ANY KIND, either express or implied. See the License for the specific
+# language governing permissions and limitations under the License.
+
+Objective:
+Explore different storage classes
+Store object in Infrequent Access Storage Class 
+Observe access behavior
+Optimize cost of storage by using a tiering strategy
+
+Steps:
+1. From Services, open "S3" management console
+2. It shows available buckets in the account
+3. Open your bucket lab-<UserName>  (Example: lab-chandra)
+
+4. Add Files 
+    Select the file: AWSWhitePapers\AWS-Cost-Optimization-Pillar.pdf    
+    
+5. Go to "Next"
+
+6. What you see is the permissions at the object level (Object Access Control List)
+	Select "Next"
+
+7. You can now pick the storage class for your object
+	Standard = Hot Data. Frequently accessed data with multi-az availability and durability
+	Standard-IA = Warm Data. Infrequently accessed data with multi-az availability and durability
+				  Same performance as standard
+	
+	Intelligent-Tiering = New Option. 
+	Automatically moves objects between standard and infrequent access 
+	based on access pattern. Additional monitoring and tiering fees apply
+	One-Zone IA = Warm Data. Infrequently accessed data with single-az availability and durability
+				  Same performance as standard
+	Glacier = Cold Data with high durability
+8. Select "Standard-IA" and upload the object
+9. Object is now stored in Standard-IA Storage Class
+9. You can access the object any time you need. Storage cost is 50% cheaper when compared to Standard. However, there is an additional per GB access fee everytime you access the object [hence the name infrequent access]

@@ -1,0 +1,36 @@
+# Lab Exercises Developed by Cloud Wave LLC. 
+#   https://www.cloudwavetraining.com
+# This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF
+# ANY KIND, either express or implied. See the License for the specific
+# language governing permissions and limitations under the License.
+
+Objective:
+Explore different storage classes
+Store object in Glacier Storage Class 
+Observe access behavior
+Optimize cost of storage by using a tiering strategy
+
+Steps:
+1. From Services, open "S3" management console
+2. It shows available buckets in the account
+3. Open your bucket lab-<UserName>  (Example: lab-chandra)
+
+4. Select "AWS-Cost-Optimization-Pillar.pdf" file
+
+5. From "Actions", pick "Change Storage Class"
+6. Pick "Glacier" Storage Class
+7. And "Save" Changes
+
+8. Glacier storage is used for long term archiving at very low per GB costs
+
+Retrieve:
+1. Data takes anywhere from 1 minute to 4 hours to retrieve
+2. Select "AWS-Cost-Optimization-Pillar.pdf" file
+3. From "Actions" menu, select "Restore From Glacier"
+4. You can speicfy options for restoring:
+	Original is safe in Glacier
+	Restored copy can be kept in s3 bucket for specified number of days
+	Number of days: 10 days
+	Pick "Standard Retrieval" and it takes around 3-5 hours to retrieve the file
+5. If you select the object, you can see that the restoration is in progress
+6. We will come back to this after 3 hours

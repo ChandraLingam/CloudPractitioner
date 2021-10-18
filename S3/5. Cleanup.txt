@@ -1,0 +1,20 @@
+# Lab Exercises Developed by Cloud Wave LLC. 
+#   https://www.cloudwavetraining.com
+# This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF
+# ANY KIND, either express or implied. See the License for the specific
+# language governing permissions and limitations under the License.
+
+Cleanup Steps:
+1. S3 12-month free tier covers only Standard Storage Class usage
+2. In this lab, we tried other storage classes such as Standard-Infrequent Access, Glacier and so forth
+3. To avoid unnecessary charges, please delete the files from the bucket
+    [You can leave the buckets as-is or delete the bucket]
+4. From your S3 console, choose your bucket
+5. Select all the files [also known as objects in S3]
+6. Click Delete
+7. Confirm by typing delete and click on Delete objects
+8. To delete the bucket, go to the S3 buckets list
+9. Select your bucket: lab-<UserName>
+10. Click Delete
+11. Type in the bucket name
+12. Click Delete bucket

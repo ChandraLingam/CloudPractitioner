@@ -1,0 +1,73 @@
+# Lab Exercises Developed by Cloud Wave LLC. 
+#   https://www.cloudwavetraining.com
+# This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF
+# ANY KIND, either express or implied. See the License for the specific
+# language governing permissions and limitations under the License.
+
+Objective:
+1. Launch an EC2 instance
+2. Preconfigure with Apache web server
+3. View the web page
+    
+Steps:
+1. From Services, look for "EC2" and open the console
+    Make sure Region is "Asia Pacific (Mumbai)"
+
+2. Select Instances and "Launch Instance"
+
+3. Step 1: Choose an Amazon Machine Image
+	Select "Amazon Linux 2 AMI"
+    
+4. Step 2: Choose an Instance Type  
+    Select either "t2.micro" or "t3.micro" instance	
+
+5. Go to next page [Configure Instance Details]
+
+6. Scroll down to the bottom and Expand Advanced Details. In the "User data", field, place the below content 
+#!/bin/bash
+yum update -y
+yum install -y httpd
+systemctl start httpd
+systemctl enable httpd
+host_name=`curl -s http://169.254.169.254/latest/meta-data/local-hostname`
+echo "hi there from $host_name" > /var/www/html/test.txt
+echo "done"
+
+7. Go to next page "Add Storage", leave the default settings
+
+8. Go to the next page "Add Tags"
+    a. Click Add Tag
+	b. Under the Key column, type: Name
+    c. Under the Value column, type: Webserver
+
+9. Go to the next page "Configure Security Group"
+    a. Choose "Create a new security group"
+    b. For Security Group Name: WebserverSG
+    c. Change the Type from SSH to HTTP (for web access)
+    d. For Source, Choose "Anywhere"
+    
+10. Review and Launch
+
+11. In the keypair page, choose "Proceed without a key pair" and acknowledge the check box
+
+12. Launch Instance
+    
+Test:    
+1. Wait for two minutes until the Instance state is "Running" and Status check is completed
+
+2. Select your instance and in the detail page
+
+3. Copy your EC2 instance "Public IPv4 address" and paste in a browser
+    a. You should see a welcome page
+		
+	b. Now, visit the test.txt page:
+		http://<PublicIPAddress>/test.txt
+    
+    c. The test.txt page will now display a welcome message along with the name of the server that is processing the request
+    
+Cleanup:
+1. To avoid unnecessary charges, stop or terminate the EC2 instance
+2. From EC2 console, select the instance
+3. In the "Instance state" drop down, choose "Terminate instance"
+    
+    

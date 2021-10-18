@@ -1,0 +1,38 @@
+# Lab Exercises Developed by Cloud Wave LLC. 
+#   https://www.cloudwavetraining.com
+# This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF
+# ANY KIND, either express or implied. See the License for the specific
+# language governing permissions and limitations under the License.
+
+Objective:
+S3 can be used to host a static website and javascript driven apps
+In this exercise, we are going to host a simple website in S3. No servers required!
+
+Steps - Enable Static Website Hosting:
+1. From Services, open "S3" management console
+2. It shows available buckets in the account
+3. Open your bucket lab-<UserName>  (Example: lab-chandra)
+4. Select "Properties" tab
+5. Scroll down to the "Static website hosting" section (at the bottom of the page)
+6. Select "Edit"
+7. For "Static website hosting" choose "Enable"
+8. Under "Hosting type", choose "Host a static website"
+9. For Index document, type "index.html"
+10. For Error document, type "error.html"
+11. Save Changes
+
+Steps - Upload Webpage:
+1. Go to "Permissions" tab
+2. In the "Block public access" section, disable "Block all public access" check box
+3. Save Changes and confirm 
+4. Go to "Objects" tab
+5. Upload "index.html" and "error.html" pages provided in the resources
+6. Once the files are uploaded to the bucket, choose "index.html" in your bucket
+7. Under "Actions" drop down menu, select "Make Public"
+8. Repeat the steps for "error.html"
+
+Steps - View Webpage
+1. Select "Properties" tab
+2. Scroll down to the "Static website hosting" section (at the bottom of the page)
+3. Click on the link under "Bucket website endpoint". This is your website URL
+

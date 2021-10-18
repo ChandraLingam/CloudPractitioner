@@ -1,0 +1,33 @@
+# Lab Exercises Developed by Cloud Wave LLC. 
+#   https://www.cloudwavetraining.com
+# This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF
+# ANY KIND, either express or implied. See the License for the specific
+# language governing permissions and limitations under the License.
+
+Objective:
+Create a bucket, upload objects, download objects
+
+Steps:
+1. From Services, open "S3" management console
+2. It shows available buckets in the account
+3. Create Bucket in Mumbai Region
+4. Configuration:
+    a. Bucket Name: lab-<UserName>  
+        Example: lab-chandra
+    b. Region: Asia Pacific (Mumbai)
+    c. Create 
+    
+   NOTE: Bucket name needs to be globally unique across all accounts. If you get a name conflict, add a random suffix
+   For example: lab-chandra-123
+ 
+Upload Files: 
+1. Select Your bucket
+2. Select "Upload"
+3. Select "Add files" (scroll down if you don't see)
+4. Upload file: 
+        AWSWhitePapers\AWS_Well-Architected_Framework.pdf 
+        
+5. Select "Upload"
+6. File is now available in your S3 Bucket and Automatically replicated across multiple availability zones
+7. The default storage class is "Standard"
+

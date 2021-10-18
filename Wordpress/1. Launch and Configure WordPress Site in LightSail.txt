@@ -1,0 +1,27 @@
+# Lab Exercises Developed by Cloud Wave LLC. 
+#   https://www.cloudwavetraining.com
+# This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF
+# ANY KIND, either express or implied. See the License for the specific
+# language governing permissions and limitations under the License.
+
+Objective:
+WordPress is a popular website builder [Build a website, Online store, Blogs]
+
+In this lab, we are going to launch a wordpress site in just a few minutes using AWS LightSail.
+
+LightSail simplifies the administration of your website
+
+LightSail has a three-month Free trial period
+
+Instructions:
+Follow Steps 1 through 4 in the below link
+    a. Use "Asia Pacific (Mumbai)" Region
+    b. Instance Type: 1 GB RAM and 1 vCPU
+    c. No need to complete Step 5 onwards for this activity
+
+https://lightsail.aws.amazon.com/ls/docs/en_us/articles/amazon-lightsail-tutorial-launching-and-configuring-wordpress
+
+
+Cleanup:
+1. To avoid unnecessary charges, please stop the LightSail Instance after this lab
+2. Select your LightSail instance and choose Stop
